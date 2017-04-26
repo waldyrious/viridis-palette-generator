@@ -41,17 +41,24 @@
 <body style="font-family: sans-serif;">
 
 <h1>Viridis Color Palette Generator</h1>
+<p>
+    The matplotlib colormaps introduced in 2015 are widely popular, with implementations of the palettes in <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">R</a>, <a href="https://github.com/d3/d3-scale#interpolateViridis">D3js</a>, and others. Popular for good reason, the palettes are colorblind-friendly, retain representational clarity in greyscale, and are generally aesthetically pleasing.
+</p>
+<p>
+    This tool provides a convenience wrapper around D3js's viridis implementation for use in data visualization tools with manual color value specification (e.g., Microsoft Excel, ArcGIS, and Tableau to name a few). To begin, select the number of categories and the color palette you'd like to use. 
+</p>
 
-<label for="groups">Number of categories: </label>
-<input type="number" id="groups" value="2" min="2" style="text-align: right">
+<label for="groups">Categories: </label>
+<input type="number" id="groups" value="5" min="2" max="256">
+<label for="palette">Palette: </label>
 <select name="palette" id="palette">
     <option value="v">viridis</option>
     <option value="i">inferno</option>
     <option value="m">magma</option>
     <option value="p">plasma</option>
 </select>
-<input type="submit">
-
+<!-- <button id="generate">Generate</button> -->
+<div id="preview"></div>
 
 <div id="levels"></div>
 
