@@ -109,7 +109,7 @@
         // Update the value-levels
         var data = [];
         d3.range(0, 1 + 1/(n - 1), 1/(n - 1))
-            .slice(1, n)
+            .slice(0, n)
             .reverse()
             .map(function(l) {
                 var r, g, b, hex;
